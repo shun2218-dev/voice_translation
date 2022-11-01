@@ -6,9 +6,9 @@ const Display = memo(({ allTexts }) => {
         <div className="container">
             {
                 allTexts.length > 0 && (
-                    allTexts.map(({ id, translation, base }) => {
+                    allTexts.map((textInfo) => {
                         return (
-                            <TranscriptCard base={base} translation={translation} key={id} />
+                            <TranscriptCard textInfo={textInfo} key={textInfo.id} />
                         )
                     })
                 )
